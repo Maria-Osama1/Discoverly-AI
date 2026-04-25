@@ -1,0 +1,8 @@
+{
+  "name": "Discoverly AI",
+  "description": "An AI-powered local discovery agent that maps social media events and personalizes recommendations.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

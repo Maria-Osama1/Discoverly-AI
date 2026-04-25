@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  font-family: var(--font-sans);
+  color: #f1f5f9;
+}
+
+/* Fix leaflet map z-index issues with tailwind sidebars/modals */
+.leaflet-container {
+  z-index: 10;
+}
+.leaflet-control-container .leaflet-routing-container,
+.leaflet-top, .leaflet-bottom {
+  z-index: 20 !important;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pin-glow {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
